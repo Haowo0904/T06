@@ -1,0 +1,5 @@
+.responsive-svg-container { width: 100%; margin-bottom: 12px; }
+.responsive-svg-container svg { display: block; width: 100%; height: auto; }
+.axis-label { font-size: 14px; fill: #5a3e2b; }
+.axis { color: #5a3e2b; font-size: 10px; }
+.bar { fill: #606464; stroke: #fffaf0; stroke-width: 2; }

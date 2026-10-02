@@ -1,0 +1,36 @@
+:root {
+  --accent: #d26719;
+  --bg: #fffaf0;
+  --text: #5a3e2b;
+  --active: #ffcf82;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+header { background: var(--accent); padding: 26px 28px; }
+header h1 { margin: 0; font-size: 44px; line-height: 1.5; }
+main { padding: 30px 28px 22px; }
+main > div { max-width: 1200px; margin: 0 auto; }
+h2 { font-size: 44px; line-height: 1.6; margin: 0 0 8px; }
+h3 { font-size: 26px; margin: 0; }
+p { font-size: 24px; margin: 0 0 12px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.filters { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 8px 8px; }
+.filter { min-width: 120px; padding: 5px 14px; border: 0; border-radius: 7px; background: var(--accent); color: white; font: inherit; font-size: 24px; font-weight: 700; cursor: pointer; }
+.filter.active { background: var(--active); }
+.filter:hover { filter: brightness(.95); }
+.filter:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+#filters_size { margin-bottom: 20px; }
+footer { background: var(--text); color: white; padding: 16px 24px; margin-top: 0; }
+footer p { text-align: center; margin: 0; font-size: 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 596px) {
+  header { padding: 20px 16px; }
+  header h1 { font-size: 30px; }
+  main { padding: 24px 16px; }
+  h2 { font-size: 30px; line-height: 1.4; }
+  p { font-size: 18px; }
+  .filters { gap: 8px; margin-left: 0; }
+  .filter { min-width: 72px; font-size: 18px; padding: 8px 12px; }
+  footer p { font-size: 16px; }
+}

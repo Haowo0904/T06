@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Consumption</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisations.css">
+  <script defer src="https://d3js.org/d3.v7.min.js"></script>
+  <script defer src="js/shared-constants.js"></script>
+  <script defer src="js/histogram.js"></script>
+  <script defer src="js/interactions.js"></script>
+  <script defer src="js/load-data.js"></script>
+</head>
+<body>
+  <header><h1>TV Energy Consumption</h1></header>
+  <main>
+    <div>
+      <h2>Energy Consumption for different TV screen types and sizes</h2>
+      <p>Most TV's on sale in Australia are LED and they vary considerably in energy consumption.</p>
+      <div id="filters_screen" class="filters" role="group" aria-label="Screen technology"></div>
+      <div id="histogram" class="responsive-svg-container"></div>
+      <div id="filters_size" class="filters" role="group" aria-label="Screen size in inches"></div>
+      <p id="chart-status" class="sr-only" role="status" aria-live="polite">Loading TV data…</p>
+      <p>Only TVs with energy consumption less than 1,800 kWh/per year have been included.</p>
+      <div class="body">
+        <h3>Data source</h3>
+        <p><a href="https://data.gov.au/data/dataset/energy-rating-data-for-household-appliances">Energy Rating Data for household appliances – Televisions</a><br>Downloaded Jan 2025</p>
+      </div>
+    </div>
+  </main>
+  <footer><p>© 2025 Data Visualisation Week 6</p></footer>
+</body>
+</html>
