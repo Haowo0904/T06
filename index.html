@@ -9,6 +9,7 @@
   <script defer src="https://d3js.org/d3.v7.min.js"></script>
   <script defer src="js/shared-constants.js"></script>
   <script defer src="js/histogram.js"></script>
+  <script defer src="js/scatterplot.js"></script>
   <script defer src="js/interactions.js"></script>
   <script defer src="js/load-data.js"></script>
 </head>
@@ -17,12 +18,13 @@
   <main>
     <div>
       <h2>Energy Consumption for different TV screen types and sizes</h2>
-      <p>Most TV's on sale in Australia are LED and they vary considerably in energy consumption.</p>
+      <p>TV's vary considerably in energy consumption.</p>
       <div id="filters_screen" class="filters" role="group" aria-label="Screen technology"></div>
       <div id="histogram" class="responsive-svg-container"></div>
       <div id="filters_size" class="filters" role="group" aria-label="Screen size in inches"></div>
       <p id="chart-status" class="sr-only" role="status" aria-live="polite">Loading TV data…</p>
-      <p>Only TVs with energy consumption less than 1,800 kWh/per year have been included.</p>
+      <p>TVs with same star rating can have very different energy consumption. It all depends on screen size and technology type.</p>
+      <div id="scatterplot" class="responsive-svg-container"></div>
       <div class="body">
         <h3>Data source</h3>
         <p><a href="https://data.gov.au/data/dataset/energy-rating-data-for-household-appliances">Energy Rating Data for household appliances – Televisions</a><br>Downloaded Jan 2025</p>

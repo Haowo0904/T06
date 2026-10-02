@@ -4,13 +4,16 @@ d3.csv('data/Ex6_TVdata.csv', d => ({
   screenSize: +d.screenSize,
   screenTech: d.screenTech.trim(),
   energyConsumption: d.energyConsumption.trim() === '' ? NaN : +d.energyConsumption,
-  star: +d.star
+  star: d.star.trim() === '' ? NaN : +d.star
 })).then(rows => {
   const data = rows.filter(d => Number.isFinite(d.energyConsumption) &&
-    d.energyConsumption >= 0 && d.energyConsumption < 1800);
+    d.energyConsumption >= 0);
   console.info(`Loaded ${rows.length} TVs; ${data.length} included in the histogram.`);
   drawHistogram(data);
+  drawScatterplot(data.filter(d => Number.isFinite(d.star)));
   populateFilters(data);
+  createTooltip();
+  handleMouseEvents();
 }).catch(error => {
   console.error('Error loading the CSV file:', error);
   d3.select('#histogram').append('p').attr('role', 'alert')

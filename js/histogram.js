@@ -10,7 +10,7 @@ const drawHistogram = data => {
   barsGroup = innerChart.append('g');
   innerChart.append('g').attr('class', 'axis')
     .attr('transform', `translate(0,${innerHeight})`)
-    .call(d3.axisBottom(xScale).tickValues(d3.range(0, 1801, 200)).tickFormat(d3.format(',')));
+    .call(d3.axisBottom(xScale).tickValues(d3.range(0, 2801, 200)).tickFormat(d3.format(',')));
   innerChart.append('g').attr('class', 'axis').call(d3.axisLeft(yScale).ticks(13).tickFormat(d3.format(',d')));
   svg.append('text').attr('class', 'axis-label').attr('x', width - 20).attr('y', height - 5)
     .attr('text-anchor', 'end').text('Labeled Energy Consumption (kWh/year)');
